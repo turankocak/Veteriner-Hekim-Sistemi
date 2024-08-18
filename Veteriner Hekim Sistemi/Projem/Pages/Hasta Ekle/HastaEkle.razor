@@ -1,0 +1,82 @@
+@page "/HastaEkle"
+@inject IJSRuntime JS
+@inject NavigationManager NavigationManager 
+@inherits HastaEkleBase
+
+<PageTitle>VETERİNER HİZMETLERİ | HASTA KAYIT</PageTitle>
+
+<html>
+<head>
+    @* <title>VETERİNER HİZMETLERİ | GİRİŞ</title> *@
+    @* <link rel="Shortcut Icon"  href="../Yeni klasör/img/tarimikon.png"  type="image/x-icon" > *@
+    <link href="css/hastaekle.css" rel="stylesheet" />
+    <link rel="Shortcut Icon"  href="img/tarimikon.png"  type="image/x-icon" >
+	@* <script src="../javascript/giris.js"> *@
+@* </script> *@
+</head>
+<body>
+    
+    <div class="panel">
+        <div class="buldum"><a href="/Anasayfa"><img src="img/tarimlogo2.png" height="100" width="250"></a> </div>
+        <div class="contact-form">
+            <h4 id="h4">HASTA KAYIT</h4>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <form>
+                 <div class="txtb">
+                    <input id="Hastanının_Turu" @bind="Hastanin_Turu" type="text" placeholder="Hastanın  Türü">
+                </div>   
+                <div class="txtb">
+                     <!-- <label> <font color="gray" >Ürün Hakkında Detaylı bilgi ?</font></label>
+                    <textarea cols="38" rows="5"> </textarea> -->
+                    <input id="Hastanın_Cinsi" @bind="Hastanin_Cinsi" type="text" placeholder="Hastanın Cinsi">
+                </div>
+                <div class="txtb">
+                    <input id="Mikrocip_No" @bind="Mikrocip_No" type="text" placeholder="Mikroçip No" >
+                </div>
+                <div class="txtb">
+                 <div class="txtb">
+                     <label id="cinsiyeti"> Cinsiyeti    &nbsp; &nbsp; &nbsp; </label>
+                     
+                    <select id="Cinsiyeti" @bind="Cinsiyeti" name="gender" required>
+          <option value="">Seçiniz</option>
+          <option value="erkek">Erkek</option>
+          <option value="dişi">Dişi</option>
+                    </select>
+                 </div>
+                </div>
+                <div class="txtb">
+                    <input id="Yasi " @bind="Yasi" type="number" placeholder="Yaşı">
+                </div>
+
+                <div class="txtb">
+                    <label> <font color="gray" >Doğum Tarihi</font></label>
+                     <input type="date" @bind="Dogum_Tarihi" id="Dogum_Tarihi">
+                </div>
+
+                <div class="txtb">
+                    <input id="Sahibin_ismi" @bind="Sahibinin_ismi" type="text" placeholder="Sahibin İsmi">
+                </div>
+                <div class="txtb">
+                    <input id="Sahibin_soyismi " @bind="Sahibinin_ismi"  type="text" placeholder="Sahibin Soyismi">
+                </div>
+
+                <div class="txtb">
+                    <input type="Telefon_No" @bind="Telefon_No" placeholder="Telefon No">
+                </div> 
+
+                <div class="txtb">
+
+
+                </div>
+
+                <input type="button" class="logbtn" value="KAYDET" @onclick="async () => await Kayıt()"  >
+			</form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+@* onclick="window.location.href ='/Anasayfa'" *@

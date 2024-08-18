@@ -1,0 +1,51 @@
+@page "/MusteriEkle"
+@inject IJSRuntime JS
+@inject NavigationManager NavigationManager 
+@inherits MusteriEkleBase
+
+<PageTitle>VETERİNER HİZMETLERİ | MÜSTERİ EKLE</PageTitle>
+
+<html>
+<head>
+    @* <title>VETERİNER HİZMETLERİ | GİRİŞ</title> *@
+    @* <link rel="Shortcut Icon"  href="../Yeni klasör/img/tarimikon.png"  type="image/x-icon" > *@
+    <link href="css/musteriekle.css" rel="stylesheet" />
+    <link rel="Shortcut Icon"  href="img/tarimikon.png"  type="image/x-icon" >
+	@* <script src="../javascript/giris.js"> *@
+@* </script> *@
+</head>
+<body>
+    
+    <div class="panel">
+        <div class="buldum"><a href="/Anasayfa"><img src="img/tarimlogo2.png" height="100" width="250"></a> </div>
+        <div class="contact-form">
+            <h4 id="h4">MÜŞTERİ KAYIT</h4>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <form>
+                
+                <div class="txtb">
+                    <input id="Musteri_ismi " @bind="Musteri_ismi" type="text" placeholder="İsim">
+                </div>
+                <div class="txtb">
+                    <input id="Musteri_soyismi " @bind="Musteri_soyismi" type="text" placeholder=" Soyisim">
+                </div>
+
+                <div class="txtb">
+                    <input type="Telefon_No" @bind="Telefon_No" placeholder="Telefon No">
+                </div> 
+
+                <div class="txtb">
+                    <input type="E_Posta" @bind="E_Posta"  placeholder="E_Mail">
+                </div>
+
+                <input type="button" class="logbtn" value="KAYDET" @onclick="async () => await Kayıt()"  >
+			</form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+@* onclick="window.location.href ='/Anasayfa'" *@

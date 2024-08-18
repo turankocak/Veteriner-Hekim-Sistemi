@@ -1,0 +1,70 @@
+ /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }  */
+  .randevucartcontainer
+  {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: auto;
+      justify-content: center;
+      padding-bottom: -100px;
+      margin: 5px;
+  }
+  .randevucart {
+    /* background-color: #ffffffa6;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 20px;
+      max-width: 400px;
+      margin: 0 auto; */
+
+    box-shadow: 0 7px 5px 0 rgba(243, 5, 5, 0.466);
+    max-width: 300px;
+    height: 350px;
+    margin: 1px;
+    font-family: arial;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  h2 {
+    color: rgb(224, 15, 15);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .label {
+    font-weight: bold;
+    color: rgb(224, 15, 15);
+  }
+
+  .value {
+    margin-left: 10px;
+    color: #333333;
+  }
+
+  .button {
+    background-image:linear-gradient(120deg,rgb(202, 11, 11),rgb(187, 13, 13),rgb(202, 9, 9));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    background-color: #c62828;
+  }

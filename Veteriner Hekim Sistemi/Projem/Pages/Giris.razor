@@ -1,0 +1,42 @@
+﻿@page "/"
+@inherits GirisBase
+@inject NavigationManager NavigationManager
+@inject IJSRuntime js
+<PageTitle>VETERİNER HİZMETLERİ | GİRİŞ</PageTitle>
+
+<html>
+<head>
+    @* <title>VETERİNER HİZMETLERİ | GİRİŞ</title> *@
+    @* <link rel="Shortcut Icon"  href="../Yeni klasör/img/tarimikon.png"  type="image/x-icon" > *@
+    <link href="css/login.css" rel="stylesheet" />
+    <link rel="Shortcut Icon"  href="img/tarimikon.png"  type="image/x-icon" >
+	@* <script src="../javascript/giris.js"> *@
+@* </script> *@
+</head>
+<body>
+    
+    <div class="panel">
+        <div class="buldum"><a href="/"><img src="img/tarimlogo2.png" height="100" width="250"></a> </div>
+        <div class="contact-form">
+            <form >
+                <div class="txtb">
+                    <input id="TC" type="text" placeholder="TC" @bind="TC" >
+                </div>
+                <div class="txtb">
+                    <input id="password" type="password" placeholder="Şifre" @bind="password">
+                </div>
+                <input type="button" class="logbtn" value="GirisYap"     onclick="window.location.href ='/Anasayfa'"  >
+			</form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+@* onclick="window.location.href ='/Asi'" *@
+
+@* @onclick="GirisYap" *@
+  
+ @* @onclick="async () => await GirisYap()"  *@
+ @* @onclick="async () => await GirisYap()" *@
